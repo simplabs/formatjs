@@ -9,6 +9,7 @@ import {
 import {resolveBuiltinFormatter, Formatter} from './formatters'
 import stringify from 'json-stable-stringify'
 import {parseFile} from './vue_extractor'
+import {parseFile as parseHbsFile} from './hbs_extractor'
 import {parseScript} from './parse_script'
 import {printAST} from '@formatjs/icu-messageformat-parser/printer'
 import {hoistSelectors} from '@formatjs/icu-messageformat-parser/manipulator'
@@ -136,13 +137,15 @@ function processFile(
         ),
     }
   }
-
   debug('Processing opts for %s: %s', fn, opts)
 
   const scriptParseFn = parseScript(opts, fn)
   if (fn.endsWith('.vue')) {
     debug('Processing %s using vue extractor', fn)
     parseFile(source, fn, scriptParseFn)
+  } else if (fn.endsWith('.hbs')) {
+    debug('Processing %s using hbs extractor', fn)
+    parseHbsFile(source, fn, opts)
   } else {
     debug('Processing %s using typescript extractor', fn)
     scriptParseFn(source)
