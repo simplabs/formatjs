@@ -47,6 +47,7 @@ SRC_DEPS = [
     "@npm//json-stable-stringify",
     "@npm//loud-rejection",
     "@npm//typescript",
+    "@npm//ember-template-recast",
     "//packages/icu-messageformat-parser:dist",
     "//packages/ts-transformer:dist",
 ]
