@@ -36,10 +36,14 @@
     "@formatjs/cli-lib": "workspace:*"
   },
   "peerDependencies": {
-    "@vue/compiler-sfc": "^3.2.34"
+    "@vue/compiler-sfc": "^3.2.34",
+    "ember-template-recast": "^6.0.0"
   },
   "peerDependenciesMeta": {
     "@vue/compiler-sfc": {
+      "optional": true
+    },
+    "ember-template-recast": {
       "optional": true
     }
   },
