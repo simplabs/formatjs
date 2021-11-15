@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hbs_extractor 1`] = `
+Array [
+  Object {
+    "defaultMessage": "in template",
+    "description": "in template desc",
+    "id": "7MCO2v",
+  },
+]
+`;
