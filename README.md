@@ -1,5 +1,27 @@
 # FormatJS
 
+## Running this on an ember project
+
+This is just a fork of FormatJS with the functionality added to the cli to extract strings from hbs files
+
+To get this running locally do the following steps:
+
+- clone this fork locally
+- `npm install`
+- `npx bazel build //packages/cli`
+- make a coffee while you wait ☕️
+- `cd dist/bin/packages/cli/cli/`
+- `chmod 777 .` (for some reason you can't create directories in this folder 🤷‍♀️)
+- `npm i` (because monorepos are hard)
+- copy the full path to `dist/bin/packages/cli/cli/bin/formatjs`
+- cd into the `soxhub-client`
+- make sure you are on the branch that has already had the transform run to extract strings (`SOX-12356-intl-transform`)
+- run `/full/path/to/formatjs extract 'app/**/*.hbs' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en-us.json`
+- glory in the beauty of your new `lang/en-us.json` file
+
+---
+
+
 [![Unit Tests](https://github.com/formatjs/formatjs/actions/workflows/tests.yml/badge.svg)](https://github.com/formatjs/formatjs/actions/workflows/tests.yml)
 [![Karma Tests](https://github.com/formatjs/formatjs/actions/workflows/tests-karma.yml/badge.svg)](https://github.com/formatjs/formatjs/actions/workflows/tests-karma.yml)
 [![Slack FormatJS](https://img.shields.io/badge/slack-@formatjs-green.svg?logo=slack)](https://join.slack.com/t/formatjs/shared_invite/enQtNjM2MjM4NjE4ODIxLTMyMWE0YTNhMTlmMzZlNzJlNjEzMWY0YjM2ODUxYjlmNDE2YzQyMDIxZDg3Y2Q5YWNlMzhhYzRiNDk0OGQwNGI)
