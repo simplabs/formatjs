@@ -1,6 +1,6 @@
 {
   "name": "@soxhub/formatjs-cli",
-  "version": "5.0.0",
+  "version": "1.0.0",
   "description": "A CLI for formatjs.",
   "keywords": [
     "intl",
@@ -25,9 +25,8 @@
   "bin": {
     "formatjs": "bin/formatjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/formatjs/formatjs.git"
+  "publishConfig":{
+    "registry": "https://npm.pkg.github.com/soxhub"
   },
   "bugs": {
     "url": "https://github.com/formatjs/formatjs/issues"
