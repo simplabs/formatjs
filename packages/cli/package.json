@@ -1,6 +1,6 @@
 {
   "name": "@soxhub/formatjs-cli",
-  "version": "4.4.0",
+  "version": "1.0.0",
   "description": "A CLI for formatjs.",
   "keywords": [
     "intl",
@@ -26,9 +26,8 @@
   "bin": {
     "formatjs": "bin/formatjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/formatjs/formatjs.git"
+  "publishConfig":{
+    "registry": "https://npm.pkg.github.com/soxhub"
   },
   "dependencies": {
     "ember-template-recast": "^6.0.0",
