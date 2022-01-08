@@ -19,6 +19,8 @@ To get this running locally do the following steps:
 - run `/full/path/to/formatjs extract 'app/**/*.hbs' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en-us.json`
 - glory in the beauty of your new `lang/en-us.json` file
 
+- publish: npx bazel run :publish
+
 ---
 
 
