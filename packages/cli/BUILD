@@ -8,7 +8,7 @@ exports_files(["package.json"])
 
 pkg_npm(
     name = PACKAGE_NAME,
-    package_name = "@formatjs/%s" % PACKAGE_NAME,
+    package_name = "@soxhub/formatjs/%s" % PACKAGE_NAME,
     srcs = [
         "LICENSE.md",
         "README.md",
