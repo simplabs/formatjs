@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/formatjs/formatjs"
   },
+  "publishConfig":{
+    "registry": "https://npm.pkg.github.com/soxhub"
+  },
   "scripts": {
     "bazel:lint": "bazel run //:buildifier",
     "build": "bazel build //...",
