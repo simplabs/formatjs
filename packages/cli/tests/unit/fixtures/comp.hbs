@@ -1,3 +1,24 @@
 <p>
   {{format-message 'in template' 'in template desc'}}
 </p>
+
+<p>
+  {{format-message
+    '{connectorName, select,
+        none {Install Service}
+        other {Install {connectorName}}
+      }'
+    name=(or this.name 'none')
+  }}
+</p>
+
+<!-- prettier-ignore -->
+<p>
+  {{format-message
+    '{connectorName, select,
+			none {Install Service}
+			other {Install {connectorName}}
+	}'
+    name=(or this.name 'none')
+  }}
+</p>
