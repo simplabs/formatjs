@@ -5,9 +5,10 @@ function extractText(node: any, fileName: any, options: any) {
     let message = node.params[0]?.original
     let desc = node.params[1]?.original
     let id = options.overrideIdFn(undefined, message, desc, fileName)
+    let defaultMessage = message?.replace(/\s{2,}/g, ' ')
     options.onMsgExtracted(undefined, {
       id: id,
-      defaultMessage: message,
+      defaultMessage: defaultMessage,
       description: desc,
     })
   }

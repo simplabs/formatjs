@@ -7,5 +7,15 @@ Array [
     "description": "in template desc",
     "id": "7MCO2v",
   },
+  Object {
+    "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
+    "description": null,
+    "id": "5zbbTO",
+  },
+  Object {
+    "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
+    "description": null,
+    "id": "SIw1iw",
+  },
 ]
 `;
