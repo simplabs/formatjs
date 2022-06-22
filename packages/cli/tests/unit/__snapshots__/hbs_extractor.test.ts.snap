@@ -9,13 +9,18 @@ Array [
   },
   Object {
     "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
-    "description": null,
+    "description": undefined,
     "id": "5zbbTO",
   },
   Object {
     "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
-    "description": null,
-    "id": "SIw1iw",
+    "description": undefined,
+    "id": "Yqyrq6",
+  },
+  Object {
+    "defaultMessage": "Very long message with multiple breaklines and multiple spaces '<a' href={href}> Link '</a>'",
+    "description": undefined,
+    "id": "qVJT5c",
   },
 ]
 `;
