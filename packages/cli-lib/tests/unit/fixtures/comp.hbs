@@ -22,3 +22,14 @@
     name=(or this.name 'none')
   }}
 </p>
+
+<p>
+  {{format-message
+    "Very long message with
+      multiple breaklines
+      and multiple spaces
+      '<a' href={href}> Link '</a>'"
+    href='/whatever/link'
+    htmlSafe=true
+  }}
+</p>
