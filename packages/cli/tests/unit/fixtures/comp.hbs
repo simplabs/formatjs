@@ -33,3 +33,17 @@
     htmlSafe=true
   }}
 </p>
+
+<!-- this is the same as above but is nested so it contains more whitespaces -->
+<div>
+  <p>
+    {{format-message
+      "Very long message with
+        multiple breaklines
+        and multiple spaces
+        '<a' href={href}> Link '</a>'"
+      href='/whatever/link'
+      htmlSafe=true
+    }}
+  </p>
+</div>
