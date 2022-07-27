@@ -25,7 +25,7 @@
   "bin": {
     "formatjs": "bin/formatjs"
   },
-  "publishConfig":{
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com/soxhub"
   },
   "bugs": {
