@@ -5,6 +5,8 @@ function extractText(node: any, fileName: any, options: any) {
     let message = node.params[0]?.original
     let desc = node.params[1]?.original
     let defaultMessage = message?.trim().replace(/\s+/gm, ' ')
+    // overrideIdFn needs to receive defaultMessage with already trimmed whitespaces
+    // so the resulting id is the same if messages have the same content but have different indentation
     let id = options.overrideIdFn(undefined, defaultMessage, desc, fileName)
     options.onMsgExtracted(undefined, {
       id: id,
