@@ -23,6 +23,7 @@
     "test": "bazel test //..."
   },
   "devDependencies": {
+    "ember-template-recast": "^6.0.0",
     "@babel/core": "^7.10.4",
     "@babel/helper-plugin-utils": "^7.10.4",
     "@babel/plugin-syntax-jsx": "7",

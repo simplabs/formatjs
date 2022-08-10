@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hbs_extractor 1`] = `
+Array [
+  Object {
+    "defaultMessage": "in template",
+    "description": "in template desc",
+    "id": "7MCO2v",
+  },
+  Object {
+    "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
+    "description": undefined,
+    "id": "lMXYqa",
+  },
+  Object {
+    "defaultMessage": "{connectorName, select, none {Install Service} other {Install {connectorName}} }",
+    "description": undefined,
+    "id": "lMXYqa",
+  },
+  Object {
+    "defaultMessage": "Very long message with multiple breaklines and multiple spaces '<a' href={href}> Link '</a>'",
+    "description": undefined,
+    "id": "7NZtXw",
+  },
+  Object {
+    "defaultMessage": "Very long message with multiple breaklines and multiple spaces '<a' href={href}> Link '</a>'",
+    "description": undefined,
+    "id": "7NZtXw",
+  },
+]
+`;
