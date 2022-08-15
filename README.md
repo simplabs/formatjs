@@ -21,8 +21,16 @@ To get this running locally do the following steps:
 
 - publish: npx bazel run :publish
 
----
+## Run tests
 
+- `npm test`
+
+## publish @soxhub/formatjs-cli
+
+- bump version in /cli/package.json
+- run `yarn bazel run //packages/cli:publish`
+
+---
 
 [![Unit Tests](https://github.com/formatjs/formatjs/actions/workflows/tests.yml/badge.svg)](https://github.com/formatjs/formatjs/actions/workflows/tests.yml)
 [![Karma Tests](https://github.com/formatjs/formatjs/actions/workflows/tests-karma.yml/badge.svg)](https://github.com/formatjs/formatjs/actions/workflows/tests-karma.yml)
