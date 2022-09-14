@@ -10,10 +10,6 @@ jobs:
         with:
           submodules: true
           fetch-depth: 110
-      - name: Create certs
-        run: |
-          echo "${{ secrets.BUILDBUDDY_ORG_CERT }}">buildbuddy-cert.pem
-          echo "${{ secrets.BUILDBUDDY_ORG_KEY }}">buildbuddy-key.pem
       - uses: saucelabs/sauce-connect-action@v2.2.1
         with:
           username: ${{ secrets.SAUCE_USERNAME }}
