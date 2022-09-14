@@ -25,6 +25,7 @@ importers:
       '@bazel/ibazel': '0.16'
       '@commitlint/cli': '17'
       '@commitlint/config-angular': '17'
+      '@glimmer/env': ^0.1.7
       '@jest/transform': '27'
       '@jest/types': '28'
       '@lerna-lite/cli': ^1.10.0
@@ -126,6 +127,7 @@ importers:
       '@bazel/ibazel': 0.16.2
       '@commitlint/cli': 17.0.3
       '@commitlint/config-angular': 17.0.3
+      '@glimmer/env': 0.1.7
       '@jest/transform': 27.5.1
       '@jest/types': 28.1.3
       '@lerna-lite/cli': 1.10.0

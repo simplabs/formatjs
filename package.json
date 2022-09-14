@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/formatjs/formatjs"
   },
-  "publishConfig":{
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com/soxhub"
   },
   "scripts": {
@@ -26,7 +26,6 @@
     "test": "bazel test //..."
   },
   "devDependencies": {
-    "ember-template-recast": "^6.0.0",
     "@babel/core": "^7.10.4",
     "@babel/helper-plugin-utils": "^7.10.4",
     "@babel/plugin-syntax-jsx": "7",
@@ -38,6 +37,7 @@
     "@bazel/ibazel": "0.16",
     "@commitlint/cli": "17",
     "@commitlint/config-angular": "17",
+    "@glimmer/env": "^0.1.7",
     "@jest/transform": "27",
     "@jest/types": "28",
     "@lerna-lite/cli": "^1.10.0",
@@ -86,6 +86,7 @@
     "clsx": "1",
     "commander": "8",
     "core-js": "^3.6.5",
+    "ember-template-recast": "^6.0.0",
     "emoji-regex": "^10.0.0",
     "eslint": "7 || 8",
     "fast-glob": "^3.2.7",

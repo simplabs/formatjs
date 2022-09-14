@@ -35,6 +35,11 @@ VUE_DEPS = [
     "//:node_modules/@vue/compiler-sfc",
 ]
 
+HBS_DEPS = [
+    "//:node_modules/ember-template-recast",
+    "//:node_modules/@glimmer/env",
+]
+
 SRC_DEPS = [
     "//:node_modules/@types/estree",
     "//:node_modules/@types/fs-extra",
@@ -49,7 +54,7 @@ SRC_DEPS = [
     "//:node_modules/typescript",
     ":node_modules/@formatjs/icu-messageformat-parser",
     ":node_modules/@formatjs/ts-transformer",
-] + VUE_DEPS
+] + VUE_DEPS + HBS_DEPS
 
 ts_compile_node(
     name = "dist",

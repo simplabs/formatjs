@@ -10,7 +10,7 @@ genrule(
 )
 
 npm_package(
-    name = "@soxhub/formatjs/%s" % PACKAGE_NAME,
+    name = PACKAGE_NAME,
     srcs = [
         "LICENSE.md",
         "README.md",
