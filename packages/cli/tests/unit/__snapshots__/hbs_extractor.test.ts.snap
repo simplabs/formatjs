@@ -18,14 +18,14 @@ Array [
     "id": "lMXYqa",
   },
   Object {
-    "defaultMessage": "Very long message with multiple breaklines and multiple spaces '<a' href={href}> Link '</a>'",
+    "defaultMessage": "Very long message with multiple'' breaklines and multiple spaces '<a href={href}>' Link '</a>'",
     "description": "Nice description",
-    "id": "gEqtiO",
+    "id": "mkhWoT",
   },
   Object {
-    "defaultMessage": "Very long message with multiple breaklines and multiple spaces '<a' href={href}> Link '</a>'",
+    "defaultMessage": "Very long message with multiple'' breaklines and multiple spaces '<a href={href}>' Link '</a>'",
     "description": "Nice description",
-    "id": "gEqtiO",
+    "id": "mkhWoT",
   },
 ]
 `;

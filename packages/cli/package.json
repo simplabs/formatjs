@@ -29,6 +29,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/soxhub"
   },
+  "scripts": {
+    "test": "bazel test ..."
+  },
   "dependencies": {
     "ember-template-recast": "^6.0.0",
     "@formatjs/icu-messageformat-parser": "2.0.14",
