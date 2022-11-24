@@ -2,7 +2,10 @@ import * as path from 'path'
 import {Options as swcOptions, transformSync} from '@swc/core'
 import * as fs from 'fs'
 
-const pluginBinary = path.resolve(__dirname, '../target/wasm32-wasi/debug/swc_plugin_formatjs.wasm')
+const pluginBinary = path.resolve(
+  __dirname,
+  '../target/wasm32-wasi/release/swc_plugin_formatjs.wasm'
+)
 
 let cacheBust = 1
 
@@ -122,7 +125,13 @@ export function transformAndCheck(
   opts: Options = {},
   transformOptions?: any
 ) {
-  const filePath = path.join(__dirname, 'fixtures', `${fn}.js`)
+  let filePath
+  filePath = path.join(__dirname, 'fixtures', `${fn}.js`)
+
+  if (!fs.existsSync(filePath)) {
+    filePath = path.join(__dirname, 'fixtures', `${fn}.ts`)
+  }
+
   const {code} = transform(filePath, transformOptions, {
     pragma: '@react-intl',
     ...opts,

@@ -9,6 +9,18 @@ import {
 const getFixturePath = (fixtureName: string) =>
   path.resolve(__dirname, "fixtures", fixtureName);
 
+test('oddImport', function () {
+  let result = transformAndCheck('oddImport')
+  expect(result.code).toBeDefined()
+  expect(result.code).not.toBe('')
+})
+
+test('manyCalls', function () {
+  let result = transformAndCheck('manyCalls')
+  expect(result.code).toBeDefined()
+  expect(result.code).not.toBe('')
+})
+
 test("additionalComponentNames", function () {
   expect(
     transformAndCheck("additionalComponentNames", {
