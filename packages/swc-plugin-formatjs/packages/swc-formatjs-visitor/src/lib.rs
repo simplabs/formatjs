@@ -853,6 +853,9 @@ impl<C: Clone + Comments, S: SourceMapper> FormatJSVisitor<C, S> {
                 if let Some(value) = value {
                     let value = WHITESPACE_REGEX.split(value.trim());
                     for kv in value {
+                         if !kv.contains(":") {
+                            continue;
+                        }
                         let mut kv = kv.split(":");
                         self.meta.insert(
                             kv.next().unwrap().to_string(),
