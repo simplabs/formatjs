@@ -10,12 +10,12 @@ import {resolveBuiltinFormatter, Formatter} from './formatters'
 import stringify from 'json-stable-stringify'
 import {parseFile} from './vue_extractor'
 import {parseFile as parseHbsFile} from './hbs_extractor'
+import {parseFile as parseGtsFile} from './gts_extractor'
 import {parseScript} from './parse_script'
 import {printAST} from '@formatjs/icu-messageformat-parser/printer'
 import {hoistSelectors} from '@formatjs/icu-messageformat-parser/manipulator'
 import {parse} from '@formatjs/icu-messageformat-parser'
-// @ts-ignore
-import {transform, parseTemplates} from 'ember-template-tag'
+
 export interface ExtractionResult<M = Record<string, string>> {
   /**
    * List of extracted messages
@@ -151,14 +151,7 @@ function processFile(
     parseHbsFile(source, fn, opts)
   } else if (fn.endsWith('.gts') || fn.endsWith('.gjs')) {
     debug('Processing %s as gts/gjs file', fn)
-    const {output: transformedSource} = transform({
-      input: source,
-      relativePath: '',
-    })
-    scriptParseFn(transformedSource)
-    // extract template from transformed source to then run through hbs processor
-    const [templateSource] = parseTemplates(source, '')
-    parseHbsFile(templateSource.contents, fn, opts)
+    parseGtsFile(source, fn, opts)
   } else {
     debug('Processing %s using typescript extractor', fn)
     scriptParseFn(source)
