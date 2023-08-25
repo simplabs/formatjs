@@ -22,9 +22,9 @@
   "author": "Linjie Ding <linjie@airtable.com>",
   "homepage": "https://github.com/formatjs/formatjs",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "index.js",
   "bin": {
-    "formatjs": "dist/bin/formatjs"
+    "formatjs": "bin/formatjs"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/soxhub"
