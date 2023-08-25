@@ -22,9 +22,9 @@
   "author": "Linjie Ding <linjie@airtable.com>",
   "homepage": "https://github.com/formatjs/formatjs",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "formatjs": "bin/formatjs"
+    "formatjs": "dist/bin/formatjs"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/soxhub"
@@ -33,7 +33,6 @@
     "test": "bazel test ..."
   },
   "dependencies": {
-    "ember-template-recast": "^6.0.0",
     "@formatjs/icu-messageformat-parser": "2.0.14",
     "@formatjs/ts-transformer": "3.6.0",
     "@types/estree": "^0.0.50",
@@ -44,6 +43,8 @@
     "@vue/compiler-sfc": "^3.2.19",
     "chalk": "^4.0.0",
     "commander": "8",
+    "ember-template-recast": "^6.0.0",
+    "ember-template-tag": "^2.3.8",
     "fast-glob": "^3.2.7",
     "fs-extra": "10",
     "json-stable-stringify": "^1.0.1",

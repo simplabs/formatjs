@@ -14,6 +14,8 @@ import {parseScript} from './parse_script'
 import {printAST} from '@formatjs/icu-messageformat-parser/printer'
 import {hoistSelectors} from '@formatjs/icu-messageformat-parser/manipulator'
 import {parse} from '@formatjs/icu-messageformat-parser'
+// @ts-ignore
+import {transform, parseTemplates} from 'ember-template-tag'
 export interface ExtractionResult<M = Record<string, string>> {
   /**
    * List of extracted messages
@@ -140,12 +142,23 @@ function processFile(
   debug('Processing opts for %s: %s', fn, opts)
 
   const scriptParseFn = parseScript(opts, fn)
+
   if (fn.endsWith('.vue')) {
     debug('Processing %s using vue extractor', fn)
     parseFile(source, fn, scriptParseFn)
   } else if (fn.endsWith('.hbs')) {
     debug('Processing %s using hbs extractor', fn)
     parseHbsFile(source, fn, opts)
+  } else if (fn.endsWith('.gts') || fn.endsWith('.gjs')) {
+    debug('Processing %s as gts/gjs file', fn)
+    const {output: transformedSource} = transform({
+      input: source,
+      relativePath: '',
+    })
+    scriptParseFn(transformedSource)
+		// extract template from transformed source to then run through hbs processor
+		const [templateSource]= parseTemplates(source, '');
+		parseHbsFile(templateSource.contents, fn, opts);
   } else {
     debug('Processing %s using typescript extractor', fn)
     scriptParseFn(source)
@@ -207,7 +220,7 @@ export async function extract(
       const {id, description, defaultMessage} = message
       if (!id) {
         const error = new Error(
-          `[FormatJS CLI] Missing message id for message: 
+          `[FormatJS CLI] Missing message id for message:
 ${JSON.stringify(message, undefined, 2)}`
         )
         if (throws) {
@@ -262,6 +275,7 @@ export default async function extractAndWrite(
   files: readonly string[],
   extractOpts: ExtractCLIOptions
 ) {
+  debug('LINKED PACKAGE')
   const {outFile, ...opts} = extractOpts
   const serializedResult = (await extract(files, opts)) + '\n'
   if (outFile) {
