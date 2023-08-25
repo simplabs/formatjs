@@ -156,9 +156,9 @@ function processFile(
       relativePath: '',
     })
     scriptParseFn(transformedSource)
-		// extract template from transformed source to then run through hbs processor
-		const [templateSource]= parseTemplates(source, '');
-		parseHbsFile(templateSource.contents, fn, opts);
+    // extract template from transformed source to then run through hbs processor
+    const [templateSource] = parseTemplates(source, '')
+    parseHbsFile(templateSource.contents, fn, opts)
   } else {
     debug('Processing %s using typescript extractor', fn)
     scriptParseFn(source)
@@ -275,7 +275,6 @@ export default async function extractAndWrite(
   files: readonly string[],
   extractOpts: ExtractCLIOptions
 ) {
-  debug('LINKED PACKAGE')
   const {outFile, ...opts} = extractOpts
   const serializedResult = (await extract(files, opts)) + '\n'
   if (outFile) {
