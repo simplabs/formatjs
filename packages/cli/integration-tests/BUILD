@@ -56,22 +56,6 @@ jest_test(
 )
 
 jest_test(
-    name = "extract_hbs_integration_test",
-    data = glob(
-        ["extract-hbs/**/*"],
-        exclude = ["extract-hbs/__snapshots__/*"],
-    ) + [
-        ":node_modules/@formatjs/cli",
-        "//:node_modules/@babel/types",
-        "//:node_modules/@types/node",
-        "//:node_modules/ember-template-recast",
-        "//:node_modules/fast-glob",
-    ],
-    flaky = True,
-    snapshots = glob(["extract-hbs/__snapshots__/*"]),
-)
-
-jest_test(
     name = "compile_integration_test",
     data = [
         "formatter.js",
