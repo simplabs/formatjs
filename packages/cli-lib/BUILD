@@ -19,7 +19,7 @@ npm_package(
         "package.json",
         ":dist",
     ],
-    package = "@formatjs/%s" % PACKAGE_NAME,
+    package = "@soxhun/formatjs-%s" % PACKAGE_NAME,
     visibility = ["//visibility:public"],
 )
 

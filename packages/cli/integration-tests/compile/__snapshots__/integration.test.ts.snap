@@ -152,7 +152,7 @@ exports[`basic case: help 1`] = `
   "stdout": "Usage: formatjs compile [options] [translation_files...]
 
 Compile extracted translation file into react-intl consumable JSON
-We also verify that the messages are valid ICU and not malformed. 
+We also verify that the messages are valid ICU and not malformed.
 <translation_files> can be a glob like "foo/**/en.json"
 
 Options:
@@ -797,7 +797,7 @@ exports[`out-file 2`] = `
 
 exports[`skipped malformed ICU message json 1`] = `
 {
-  "stderr": StringMatching /\\^\\\\\\[@formatjs\\\\/cli\\\\\\] \\\\\\[WARN\\\\\\] Error validating message "my name is \\{name" with ID "a1dd2" in file \\.\\*\\\\/packages\\\\/cli\\\\/integration-tests\\\\/compile\\\\/lang\\\\/malformed-messages\\.json/,
+  "stderr": StringMatching /\\^\\\\\\[@soxhub\\\\/formatjs-cli\\\\\\] \\\\\\[WARN\\\\\\] Error validating message "my name is \\{name" with ID "a1dd2" in file \\.\\*\\\\/packages\\\\/cli\\\\/integration-tests\\\\/compile\\\\/lang\\\\/malformed-messages\\.json/,
   "stdout": "{
   "a1d12": "I have {count, plural, one{a dog} other{many dogs}}",
   "ashd2": "a message"

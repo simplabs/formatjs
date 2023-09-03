@@ -12,7 +12,7 @@ const nativeCursorTo = promisify(readline.cursorTo).bind(readline)
 
 // From:
 // https://github.com/yarnpkg/yarn/blob/53d8004229f543f342833310d5af63a4b6e59c8a/src/reporters/console/util.js
-export async function clearLine(terminal: typeof process['stderr']) {
+export async function clearLine(terminal: (typeof process)['stderr']) {
   if (!supportsColor) {
     if (terminal.isTTY) {
       // terminal
@@ -35,7 +35,7 @@ const LEVEL_COLORS = {
 }
 
 function label(level: keyof typeof LEVEL_COLORS, message: string) {
-  return `[@formatjs/cli] [${LEVEL_COLORS[level](
+  return `[@soxhub/formatjs-cli] [${LEVEL_COLORS[level](
     level.toUpperCase()
   )}] ${message}`
 }

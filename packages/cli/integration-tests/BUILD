@@ -9,7 +9,7 @@ jest_test(
         ["compile_folder/**/*"],
         exclude = ["compile_folder/__snapshots__/*"],
     ) + [
-        ":node_modules/@formatjs/cli",
+        ":node_modules/@soxhub/formatjs-cli",
         "//:node_modules/@types/fs-extra",
         "//:node_modules/@types/rimraf",
         "//:node_modules/fast-glob",
@@ -27,7 +27,7 @@ jest_test(
         exclude = ["extract/__snapshots__/*"],
     ) + [
         "formatter.js",
-        ":node_modules/@formatjs/cli",
+        ":node_modules/@soxhub/formatjs-cli",
         "//:node_modules/@types/fs-extra",
         "//:node_modules/@types/rimraf",
         "//:node_modules/fast-glob",
@@ -44,7 +44,7 @@ jest_test(
         ["extract-vue/**/*"],
         exclude = ["extract-vue/__snapshots__/*"],
     ) + [
-        ":node_modules/@formatjs/cli",
+        ":node_modules/@soxhub/formatjs-cli",
         "//:node_modules/@babel/types",
         "//:node_modules/@types/node",
         "//:node_modules/@vue/compiler-core",
@@ -59,7 +59,7 @@ jest_test(
     name = "compile_integration_test",
     data = [
         "formatter.js",
-        ":node_modules/@formatjs/cli",
+        ":node_modules/@soxhub/formatjs-cli",
         "//:node_modules/@types/rimraf",
         "//:node_modules/rimraf",
     ] + glob(
