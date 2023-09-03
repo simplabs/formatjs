@@ -20,4 +20,3 @@ npm_package(
     package = "@soxhub/formatjs-%s" % PACKAGE_NAME,
     visibility = ["//visibility:public"],
 )
-
