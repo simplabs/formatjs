@@ -148,7 +148,7 @@ async function processFile(
     const {parseFile} = await import('./vue_extractor')
     parseFile(source, fn, scriptParseFn)
   } else if (fn.endsWith('.hbs')) {
-    debug('Processing %s using vue extractor', fn)
+    debug('Processing %s using hbs extractor', fn)
     const {parseFile} = await import('./hbs_extractor')
     parseFile(source, fn, opts)
   } else {
