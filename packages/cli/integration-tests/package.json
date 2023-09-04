@@ -1,5 +1,5 @@
 {
   "devDependencies": {
-    "@soxhub/formatjs-cli": "workspace:*"
+    "@formatjs/cli": "workspace:*"
   }
 }

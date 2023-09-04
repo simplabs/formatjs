@@ -35,7 +35,7 @@ const LEVEL_COLORS = {
 }
 
 function label(level: keyof typeof LEVEL_COLORS, message: string) {
-  return `[@soxhub/formatjs-cli] [${LEVEL_COLORS[level](
+  return `[@formatjs/cli] [${LEVEL_COLORS[level](
     level.toUpperCase()
   )}] ${message}`
 }

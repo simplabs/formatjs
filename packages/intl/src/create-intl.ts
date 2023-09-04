@@ -39,7 +39,7 @@ function verifyConfigMessages<T = string>(config: IntlConfig<T>) {
     messagesContainString(config.messages || {})
   ) {
     config.onWarn(`[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled.
-Please consider using "@soxhub/formatjs-cli" to pre-compile your messages for performance.
+Please consider using "@formatjs/cli" to pre-compile your messages for performance.
 For more details see https://formatjs.io/docs/getting-started/message-distribution`)
   }
 }

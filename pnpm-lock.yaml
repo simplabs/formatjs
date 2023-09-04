@@ -469,7 +469,7 @@ importers:
 
   packages/cli/integration-tests:
     devDependencies:
-      '@soxhub/formatjs-cli':
+      '@formatjs/cli':
         specifier: workspace:*
         version: link:..
 

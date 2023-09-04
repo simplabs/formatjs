@@ -7,7 +7,7 @@ import {basename} from 'path'
 import {mkdtempSync} from 'fs'
 import {readJSON} from 'fs-extra'
 const exec = promisify(nodeExec)
-const BIN_PATH = require.resolve('@soxhub/formatjs-cli/bin/formatjs')
+const BIN_PATH = require.resolve('@formatjs/cli/bin/formatjs')
 
 test('basic case: help', async () => {
   await expect(
