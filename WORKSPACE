@@ -234,9 +234,9 @@ container_pull(
 
 http_archive(
     name = "io_buildbuddy_buildbuddy_toolchain",
-    sha256 = "a430e0b50ee9c64713cfc476c610f80e9a8a3f84fb27c96f0da886f21d5bf3e1",
-    strip_prefix = "buildbuddy-toolchain-f0a5cf35d2f580e623996fcf13108f319a79d8c5",
-    urls = ["https://github.com/buildbuddy-io/buildbuddy-toolchain/archive/f0a5cf35d2f580e623996fcf13108f319a79d8c5.tar.gz"],
+    sha256 = "1cab6ef3ae9b4211ab9d57826edd4bbc34e5b9e5cb1927c97f0788d8e7ad0442",
+    strip_prefix = "buildbuddy-toolchain-b043878a82f266fd78369b794a105b57dc0b2600",
+    urls = ["https://github.com/buildbuddy-io/buildbuddy-toolchain/archive/b043878a82f266fd78369b794a105b57dc0b2600.tar.gz"],
 )
 
 load("@io_buildbuddy_buildbuddy_toolchain//:deps.bzl", "buildbuddy_deps")
