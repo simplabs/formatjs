@@ -8,7 +8,7 @@ export default class Comp extends Component {
 
   get message() {
       return this.intl.formatMessage({
-          defualtMessage: 'in gjs file'
+          defaultMessage: 'in gjs file'
       });
   }
 
