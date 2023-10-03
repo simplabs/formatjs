@@ -3,6 +3,10 @@
 exports[`gts_extractor 1`] = `
 [
   {
+    "defaultMessage": "in gjs file",
+    "id": "YCDlzq",
+  },
+  {
     "defaultMessage": "in template",
     "description": "in template desc",
     "id": "7MCO2v",
