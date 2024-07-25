@@ -8,8 +8,6 @@ More details in the [cli-lib readme](https://github.com/soxhub/formatjs/blob/mai
 
 # FormatJS
 
-[![Sauce Browser Matrix Status](https://app.saucelabs.com/browser-matrix/formatjsproject.svg)](https://app.saucelabs.com/u/formatjsproject)
-
 This repository is the home of [FormatJS](http://formatjs.io/) and related libraries.
 
 **Slack:** Join us on Slack at [formatjs.slack.com](https://formatjs.slack.com/) for help, general conversation and more 💬🎊🎉
